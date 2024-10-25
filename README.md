@@ -1,11 +1,11 @@
-# mystring.h
+# string.h
 
 The `string.h` library provides a set of functions for common string operations in C. These functions replicate similar functionality to the standard C library string functions, offering manipulation of memory blocks, string concatenation, searching, tokenizing etc.
 
 ## Installation
-To use the MyString library, include the `mystring.h` header in your C program and link the `mystring.c` implementation.
+To use the string library, include the `string.h` header in your C program and link the `string.c` implementation.
 ```c
-#include "mystring.h"
+#include "string.h"
 ```
 
 ## Functions and Examples
@@ -31,7 +31,7 @@ Searches for the first occurrence of `c` in the first `n` bytes of `str`. Return
 ```c
 char str[] = "hello";
 char *ptr = memchr(str, 'e', 5);
-printf("%c\n", *ptr); // Output: e
+printf("%s\n", *ptr); // Output: ello
 ```
 
 ### 4. `int memcmp(const void *buf1, const void *buf2, size_t n)`
@@ -140,7 +140,7 @@ Finds the first occurrence in `str1` of any character in `str2`. Returns a point
 ```c
 char str[] = "hello";
 char *ptr = strpbrk(str, "aeiou");
-printf("%c\n", *ptr); // Output: e
+printf("s\n", *ptr); // Output: ello
 ```
 
 ### 18. `char *strstr(const char *str1, const char *str2)`
