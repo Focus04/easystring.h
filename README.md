@@ -1,11 +1,11 @@
-# string.h
+# easystring.h
 
-The `string.h` library provides a set of functions for common string operations in C. These functions replicate similar functionality to the standard C library string functions, offering manipulation of memory blocks, string concatenation, searching, tokenizing etc.
+The `easystring.h` library provides a set of functions for common string operations in C. These functions replicate similar functionality to the standard C library string functions, offering manipulation of memory blocks, string concatenation, searching, tokenizing etc.
 
 ## Installation
-To use the string library, include the `string.h` header in your C program and link the `string.c` implementation.
+To use the library, include the `easystring.h` header in your C program and link the `easystring.c` implementation.
 ```c
-#include "string.h"
+#include "easystring.h"
 ```
 
 ## Functions and Examples
@@ -163,4 +163,20 @@ while (token) {
 // Output:
 // Hello
 // world!
+```
+
+### 20. `size_t getline(char *str)`
+Dynamically allocates memory for a string of unknown length before the `\n` (newline) character.
+```c
+char *input = malloc(0); // Initialize the pointer to NULL
+int length = getline(input);
+printf("You entered: %s\n", input);
+printf("String length: %d\n", length);
+free(input); // Free the dynamically allocated memory
+// Input: 
+// Hello, world!
+// Output:
+// You entered: Hello, world!
+// String length: 13
+return 0;
 ```

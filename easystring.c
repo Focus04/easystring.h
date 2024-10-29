@@ -1,4 +1,5 @@
-#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 void *memcpy(void *dest, const void *src, size_t n)
 {
@@ -244,4 +245,20 @@ char *strtok(char *str, const char *sep)
     return str;
   }
   return NULL;
+}
+
+size_t getline(char *s)
+{
+  size_t i;
+  char tmp_ch;
+  scanf("%c", &tmp_ch);
+  for (i = 0; tmp_ch != '\n' && tmp_ch != '\0'; i++)
+  {
+    s = realloc(s, (i + 1) * sizeof(char));
+    *(s + i) = tmp_ch;
+    scanf("%c", &tmp_ch);
+  }
+  s = realloc(s, (i + 1) * sizeof(char));
+  *(s + i) = '\0';
+  return i;
 }

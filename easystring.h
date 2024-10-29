@@ -1,5 +1,4 @@
-#include <stddef.h>
-#include "mystring.c"
+#include "easystring.c"
 
 void *memcpy(void *dest, const void *src, size_t n);
 void *memmove(void *dest, const void *src, size_t n);
@@ -20,3 +19,4 @@ size_t strcspn(const char *str1, const char *str2);
 char *strpbrk(const char *str1, const char *str2);
 char *strstr(const char *str1, const char *str2);
 char *strtok(char *str, const char *sep);
+size_t getline(char *str);
