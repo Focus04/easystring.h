@@ -168,15 +168,14 @@ while (token) {
 ### 20. `size_t getline(char *str)`
 Dynamically allocates memory for a string of unknown length before the `\n` (newline) character.
 ```c
-char *input = malloc(0); // Initialize the pointer to NULL
+char *input = malloc(0)
 int length = getline(input);
 printf("You entered: %s\n", input);
 printf("String length: %d\n", length);
-free(input); // Free the dynamically allocated memory
+free(input);
 // Input: 
 // Hello, world!
 // Output:
 // You entered: Hello, world!
 // String length: 13
-return 0;
 ```
