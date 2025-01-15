@@ -259,7 +259,6 @@ size_t getline(char *s)
     *(s + i) = tmp_ch;
     scanf("%c", &tmp_ch);
   }
-  s = realloc(s, (i + 1) * sizeof(char));
   *(s + i) = '\0';
   return i;
 }
